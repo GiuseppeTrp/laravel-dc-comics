@@ -23,7 +23,7 @@ return new class extends Migration
             $table->text('writers');
             $table->text('artists');
             $table->string('type'); 
-            $table->date('sale_date');
+            $table->date('sale_date')->nullable();
             $table->string('price');
         });
     }

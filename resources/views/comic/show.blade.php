@@ -1,26 +1,36 @@
 @extends('layouts/app')
+
+
 @section('content')
-<div class="container py-5"></div>
 
 
-<div class="container py-5 ">
-    <div class="container text-center">
-        <h2 class="card-title p-3" >Title: {{$comic->title}}</h2>
-       <img src="{{$comic->thumb}}" alt="">
-
-       <p class="card-text">ID: {{$comic->id}}</p>
-       <p class="card-tex d-flex flex-column ">
-        <span class>Description : {{$comic->description}}</span>
-        <span>Series: {{$comic->series}}</span>
-        <span>Sale Date: {{$comic->sale_date}}</span>
-        <span>Type: {{$comic->type}}</span>
-        <span>Artists.: {{$comic->artists}}</span>
-        <span>Writers: {{$comic->writers}}</span>
-        <span>Price: {{$comic->price}}</span>
-    </p>
+<div class="container py-5 text-center ">
+    <div class="card p-2">
+        <img src="{{$comic->thumb}}" class="card-img-top" alt="Comic Image">
+        <div class="card-body fw-bold">
+          <h5 class="card-title text-decoration-underline">{{$comic->title}}</h5>
+          <p class="card-text text-warning">ID: #{{$comic->id}}</p>
+          <p class="card-text">Series: <small>{{$comic->series}}</small></p>
+          <p class="card-text">Type: <small>{{$comic->type}}</small></p>
+          <p class="card-text">Price: <small class="text-success"> {{$comic->price}}</small></p>
 
 
+
+          <div class="details hidden  text-white px-5  py-5 border rounded text-start text-wrap ">
+            <p class="card-text"> <span class="text-uppercase text-warning">Description:</span> {{$comic->description}}</p>
+            <p class="card-text"><span class="text-uppercase text-warning">Type:</span> {{$comic->type}}</p>
+            <p class="card-text"><span class="text-uppercase text-warning">Artists:</span> {{$comic->artists}}</p>
+            <p class="card-text"><span class="text-uppercase text-warning">Writers:</span> {{$comic->writers}}</p>
+            <p class="card-text"><span class="text-uppercase text-warning">Sale Date:</span> {{$comic->sale_date}}</p>
+
+          </div>
+          <a href="#" class="btn btn-outline-success text-uppercase fw-bold text-warning">Buy</a>
+        </div>
     </div>
+
+   
+      
+      
     
     
  </div>
@@ -30,3 +40,8 @@
 
     
 @endsection
+            
+        
+
+
+    

@@ -1,14 +1,48 @@
 @import "~bootstrap/scss/bootstrap";
 
 
+.card {
+  width: auto; 
+  height: auto; 
+  display: inline-block; 
+  overflow: hidden; 
+  position: relative; 
+}
 
 
+
+
+.card .details {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0; 
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: justify; 
+
+}
+
+.card:hover .details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.card img {
+    width: 100%;
+    height: 800px;
+    object-fit: contain;
+    object-position: center;
+    margin-bottom: 20px;
+}
 .custom-shadow {
-    box-shadow: 0 4px 6px rgba(45, 161, 66, 0.1), 0 1px 3px rgba(188, 35, 35, 0.08);
-    transition: transform 0.3s ease; /* Aggiungi una transizione al transform per un effetto di animazione più fluido */
+  box-shadow: 0 4px 6px rgba(45, 161, 66, 0.1), 0 1px 3px rgba(188, 35, 35, 0.08);
+  transition: transform 0.3s ease; 
 
-    &:hover {
-        cursor: pointer;
-        transform: scale(1.1); /* Ingrandisci l'elemento del 10% durante lo stato di hover */
-    }
+  &:hover {
+      cursor: pointer;
+      transform: scale(1.1); 
+  }
 }
