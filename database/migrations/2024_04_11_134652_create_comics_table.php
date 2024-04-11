@@ -13,13 +13,21 @@ return new class extends Migration
     {
         Schema::create('comics', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('title');
+            $table->text("description");
+            $table->string("thumb");
+            $table->string("series");
+
+
+            $table->text('writers');
+            $table->text('artists');
+            $table->string('type'); 
+            $table->date('sale_date');
+            $table->decimal('price', 5, 2);
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
+
     public function down(): void
     {
         Schema::dropIfExists('comics');
