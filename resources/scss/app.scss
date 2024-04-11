@@ -1,1 +1,14 @@
 @import "~bootstrap/scss/bootstrap";
+
+
+
+
+.custom-shadow {
+    box-shadow: 0 4px 6px rgba(45, 161, 66, 0.1), 0 1px 3px rgba(188, 35, 35, 0.08);
+    transition: transform 0.3s ease; /* Aggiungi una transizione al transform per un effetto di animazione più fluido */
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.1); /* Ingrandisci l'elemento del 10% durante lo stato di hover */
+    }
+}

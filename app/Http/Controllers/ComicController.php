@@ -13,7 +13,7 @@ class ComicController extends Controller
     public function index()
     {
         $comics = Comic::all();
-        return view('comic/index');
+        return view('comic/index',compact('comics'));
     }
 
     /**
@@ -35,10 +35,9 @@ class ComicController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
-    {
-        $comic = Comic::find($id);
-        // dd($comic);
+    public function show(Comic $comic)
+    {  
+        
 
         return view('comic/show', compact('comic'));
 
