@@ -20,7 +20,7 @@
                 @foreach ($comics as $comic)
 
                 <tr>
-                    <td class="text-uppercase fw-bold text-light  "><p class="custom-shadow p-1 rounded">{{$comic->title}}</p></td>
+                    <td class="text-uppercase fw-bold text-light  "><p class="custom-shadow p-1 rounded"><a class=" text-light text-decoration-none" href="{{route('comic.show', $comic->id)}}">{{$comic->title}}</a></p></td>
                     <td><a href="{{route('comic.show', $comic->id)}}" class="text-success">view</a></td>
                 </tr>
                     

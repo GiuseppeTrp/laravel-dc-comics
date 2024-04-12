@@ -24,7 +24,15 @@
             <p class="card-text"><span class="text-uppercase text-warning">Sale Date:</span> {{$comic->sale_date}}</p>
 
           </div>
-          <a href="#" class="btn btn-outline-success text-uppercase fw-bold text-warning">Buy</a>
+           
+          <div class="d-flex justify-content-around py-3">
+            <a href="{{route('comic.index', $comic->id)}}" class="btn btn-outline-light text-uppercase fw-bold text-black">Back</a>
+            <a href="#" class="btn btn-outline-success text-uppercase fw-bold text-warning">Buy</a>
+            <a href="{{route('comic.edit', $comic->id)}}" class="btn btn-outline-warning text-uppercase fw-bold text-success">Edit</a>
+  
+          </div>
+
+
         </div>
     </div>
 

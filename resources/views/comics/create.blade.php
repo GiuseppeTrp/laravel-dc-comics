@@ -26,7 +26,7 @@
 
         <div class="mb-3">
             <label for="price" class="form-label">Price</label>
-            <input type="text" class="form-control" id="price" name="price">
+            <input type="text" class="form-control" id="price" name="price" required>
         </div>
 
         <div class="mb-3">
@@ -36,22 +36,22 @@
 
         <div class="mb-3">
             <label for="sale_date" class="form-label">Sale Date</label>
-            <input type="date" class="form-control" id="sale_date" name="sale_date">
+            <input type="date" class="form-control" id="sale_date" name="sale_date" required>
 
         </div>
         <div class="mb-3">
             <label for="type" class="form-label">Type</label>
-            <input type="text" class="form-control" id="type" name="type">
+            <input type="text" class="form-control" id="type" name="type" required>
         </div>
 
         <div class="mb-3">
             <label for="artists" class="form-label">Artists</label>
-            <input type="text" class="form-control" id="artists" name="artists">
+            <input type="text" class="form-control" id="artists" name="artists" required>
         </div>
 
         <div class="mb-3">
             <label for="writers" class="form-label">Writers</label>
-            <input type="text" class="form-control" id="writers" name="writers">
+            <input type="text" class="form-control" id="writers" name="writers" required>
         </div>
 
         <button type="submit" class="btn btn-primary">Salva</button>
