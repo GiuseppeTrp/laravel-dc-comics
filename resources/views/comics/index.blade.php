@@ -21,7 +21,9 @@
 
                 <tr>
                     <td class="text-uppercase fw-bold text-light  "><p class="custom-shadow p-1 rounded"><a class=" text-light text-decoration-none" href="{{route('comic.show', $comic->id)}}">{{$comic->title}}</a></p></td>
-                    <td><a href="{{route('comic.show', $comic->id)}}" class="text-success">view</a></td>
+                    <td><a href="{{route('comic.show', $comic->id)}}" class="text-success">view</a>
+                      <a href="{{route('comic.edit', $comic->id)}}" class="btn btn-outline-warning mx-2 px-2 py-0 trash">Edit <i class="fa fa-solid fa-edit px-1 trash" ></i></a>
+                    </td>
                 </tr>
                     
                 @endforeach
