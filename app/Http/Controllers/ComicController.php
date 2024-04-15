@@ -29,6 +29,11 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
+
+         $request->validate([
+            'title'=> 'required'
+         ]);
+
         $newComic = new Comic();
 
         $newComic->title = $request->title;
@@ -43,7 +48,7 @@ class ComicController extends Controller
 
         $newComic->save();
 
-        return redirect()->route('comics.index');    }
+        return redirect()->route('comic.index');    }
 
     /**
      * Display the specified resource.
