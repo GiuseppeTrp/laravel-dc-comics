@@ -32,7 +32,7 @@
             </tbody>
           </table>
 
-          <a href="{{route('comic.create', $comic->id)}}" class="btn btn-outline-info"> Add Comics</a>
+          <a href="{{route('comic.create')}}" class="btn btn-outline-info"> Add Comics</a>
 
 
 

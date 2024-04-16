@@ -17,14 +17,14 @@ return new class extends Migration
             $table->string('title');
             $table->text("description")->nullable();
             $table->text("thumb")->nullable();
-            $table->string("series");
+            $table->string("series",80 );
 
 
             $table->text('writers');
             $table->text('artists');
-            $table->string('type'); 
+            $table->string('type',30); 
             $table->date('sale_date');
-            $table->string('price');
+            $table->string('price',10);
         });
     }
 

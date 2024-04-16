@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Comic;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class ComicController extends Controller
 {
@@ -29,10 +30,8 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validation($request->all());
 
-         $request->validate([
-            'title'=> 'required'
-         ]);
 
         $newComic = new Comic();
 
@@ -73,7 +72,9 @@ class ComicController extends Controller
      * Update the specified resource in storage.
      */
     public function update(Request $request, Comic $comic)
-    {
+    { 
+        $this->validation($request->all());
+
  
              $comic->title= $request->title;
              $comic->description = $request->description;
@@ -105,5 +106,27 @@ class ComicController extends Controller
 
         $comic->delete();
         return redirect()->route('comic.index');
+    }
+    
+
+
+
+    private function validation($data){
+        $validator = Validator::make($data,[
+            'title'=> 'required|max:255',
+            'price'=> 'required|max:10',
+            'thumb'=> 'nullable|max:5000',
+            'series'=> 'required|max:80',
+            'sale_date'=> 'required|date',
+            'type'=> 'required|max:30',
+            'artists'=> 'required|max:5000',
+            'writers'=> 'required|max:5000',
+            'description'=>'nullable|max:5000',
+            
+
+
+
+        ],)->validate();
+
     }
 }
